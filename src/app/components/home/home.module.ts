@@ -1,14 +1,16 @@
 import {NgModule} from '@angular/core';
-import {MatTabsModule, MatToolbarModule} from '@angular/material';
+import {MatFormFieldModule, MatInputModule, MatTabsModule, MatToolbarModule} from '@angular/material';
+import {HomeComponent} from './home.component';
 
 @NgModule({
-  declarations: [],
   imports: [
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
-  providers: [],
-  exports: []
+  declarations: [HomeComponent],
+  exports: [HomeComponent],
 })
 
 export class HomeModule {

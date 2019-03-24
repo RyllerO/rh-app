@@ -3,14 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
-import { HomeComponent } from './components/home/home.component';
 import {MatButtonModule, MatTabsModule, MatToolbarModule} from '@angular/material';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {HomeModule} from './components/home/home.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-  ],
   imports: [
     BrowserModule,
     // habilita animacoes
@@ -19,8 +16,11 @@ import {MatButtonModule, MatTabsModule, MatToolbarModule} from '@angular/materia
     // NoopAnimationsModule
     MatToolbarModule,
     MatTabsModule,
-    MatButtonModule
+    MatButtonModule,
+    FlexLayoutModule,
+    HomeModule
   ],
+  declarations: [AppComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })
