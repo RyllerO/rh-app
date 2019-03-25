@@ -1,20 +1,47 @@
-
-<mat-toolbar color="warn" class="toolbar">
+<mat-toolbar color="primary" class="toolbar">
   <mat-toolbar-row>
     <span>Avaliação de Desempenho</span>
   </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-form-field class="search-form">
-  <input matInput placeholder="teste" type="text">
-</mat-form-field>
+<div style="padding: 40px" class="body">
 
-<div class="container" fxLayout="row" fxLayoutGap="0,5%" fxLayoutAlign="center">
-<div fxFlex="50%">
+  <mat-tab-group>
+    <mat-tab label="Avaliação">
+      <div style="padding: 20px">
+        <!--<table mat-table  class="mat-elevation-z8">-->
+        <!--<ng-container>-->
+        <!--<th mat-header-cell *matHeaderCellDef> Competencias</th>-->
+
+        <!--</ng-container>-->
+
+        <!--&lt;!&ndash;<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>&ndash;&gt;-->
+        <!--&lt;!&ndash;<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>&ndash;&gt;-->
+        <!--</table>-->
+      </div>
+    </mat-tab>
+    <mat-tab label="Cadastro de Professores">
+      <div style="padding: 20px" fxLayoutGap="5%">
+        <mat-form-field class="search-form" >
+          <input matInput placeholder="Nome: " type="text">
+        </mat-form-field>
+        <mat-form-field class="search-form">
+          <input matInput placeholder="Disciplina: " type="text">
+        </mat-form-field>
+        <mat-form-field class="search-form">
+          <input matInput placeholder="Curso: " type="text">
+        </mat-form-field>
+        <mat-form-field class="search-form">
+          <input matInput placeholder="Formação: " type="text">
+        </mat-form-field>
+      </div>
+    </mat-tab>
+    <mat-tab label="Aba 3">
+
+    </mat-tab>
+  </mat-tab-group>
+
 </div>
-
-</div>
-
 
 
 

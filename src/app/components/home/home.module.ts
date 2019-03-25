@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
-import {MatFormFieldModule, MatInputModule, MatTabsModule, MatToolbarModule} from '@angular/material';
+import {MatFormFieldModule, MatInputModule, MatTableModule, MatTabsModule, MatToolbarModule} from '@angular/material';
 import {HomeComponent} from './home.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -8,6 +9,8 @@ import {HomeComponent} from './home.component';
     MatToolbarModule,
     MatInputModule,
     MatFormFieldModule,
+    FlexLayoutModule,
+    MatTableModule
   ],
   declarations: [HomeComponent],
   exports: [HomeComponent],
