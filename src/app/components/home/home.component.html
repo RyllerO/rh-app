@@ -9,20 +9,39 @@
   <mat-tab-group>
     <mat-tab label="Avaliação">
       <div style="padding: 20px">
-        <!--<table mat-table  class="mat-elevation-z8">-->
-        <!--<ng-container>-->
-        <!--<th mat-header-cell *matHeaderCellDef> Competencias</th>-->
-
-        <!--</ng-container>-->
-
-        <!--&lt;!&ndash;<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>&ndash;&gt;-->
-        <!--&lt;!&ndash;<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>&ndash;&gt;-->
-        <!--</table>-->
+        <div style="padding: 20px" fxLayoutGap="5%">
+          <mat-form-field class="search-form">
+            <input matInput placeholder="Membro Avaliador: " type="text">
+          </mat-form-field>
+          <mat-form-field class="search-form">
+            <input matInput placeholder="Departamento: " type="text">
+          </mat-form-field>
+          <mat-form-field class="search-form">
+            <input matInput placeholder="Professor Avaliado: " type="text">
+          </mat-form-field>
+          <mat-form-field class="search-form">
+            <input matInput placeholder="Data: " type="text">
+          </mat-form-field>
+          <mat-form-field class="search-form">
+            <input matInput placeholder="Quantidade de Avaliadores: " type="text">
+          </mat-form-field>
+          <mat-form-field class="search-form">
+            <input matInput placeholder="Avaliador Responsável: " type="text">
+          </mat-form-field>
+        </div>
+<!--        <mat-table [dataSource]="dataSource">-->
+<!--          <ng-template matColumnDef="Competencias/Variaveis">-->
+<!--            <mat-header-cell *matHeaderCellDef>Competencias/Variaveis</mat-header-cell>-->
+<!--            <mat-cell *matCellDef="let competencia"></mat-cell>-->
+<!--            <mat-header-row *matHeaderRowDef="dataSource"></mat-header-row>-->
+<!--            <mat-row *matRowDef="let row; columns: dataSource"></mat-row>-->
+<!--          </ng-template>-->
+<!--        </mat-table>-->
       </div>
     </mat-tab>
     <mat-tab label="Cadastro de Professores">
       <div style="padding: 20px" fxLayoutGap="5%">
-        <mat-form-field class="search-form" >
+        <mat-form-field class="search-form">
           <input matInput placeholder="Nome: " type="text">
         </mat-form-field>
         <mat-form-field class="search-form">
@@ -36,7 +55,7 @@
         </mat-form-field>
       </div>
     </mat-tab>
-    <mat-tab label="Aba 3">
+    <mat-tab label="Cadastro de Competências">
 
     </mat-tab>
   </mat-tab-group>
