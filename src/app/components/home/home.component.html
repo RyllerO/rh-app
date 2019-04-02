@@ -7,57 +7,111 @@
 <div style="padding: 40px" class="body">
 
   <mat-tab-group>
+
     <mat-tab label="Avaliação">
+
       <div style="padding: 20px">
+
         <div style="padding: 20px" fxLayoutGap="5%">
+
           <mat-form-field class="search-form">
             <input matInput placeholder="Membro Avaliador: " type="text">
           </mat-form-field>
+
           <mat-form-field class="search-form">
             <input matInput placeholder="Departamento: " type="text">
           </mat-form-field>
+
           <mat-form-field class="search-form">
             <input matInput placeholder="Professor Avaliado: " type="text">
           </mat-form-field>
+
           <mat-form-field class="search-form">
             <input matInput placeholder="Data: " type="text">
           </mat-form-field>
+
           <mat-form-field class="search-form">
             <input matInput placeholder="Quantidade de Avaliadores: " type="text">
           </mat-form-field>
+
           <mat-form-field class="search-form">
             <input matInput placeholder="Avaliador Responsável: " type="text">
           </mat-form-field>
+
         </div>
-<!--        <mat-table [dataSource]="dataSource">-->
-<!--          <ng-template matColumnDef="Competencias/Variaveis">-->
-<!--            <mat-header-cell *matHeaderCellDef>Competencias/Variaveis</mat-header-cell>-->
-<!--            <mat-cell *matCellDef="let competencia"></mat-cell>-->
-<!--            <mat-header-row *matHeaderRowDef="dataSource"></mat-header-row>-->
-<!--            <mat-row *matRowDef="let row; columns: dataSource"></mat-row>-->
-<!--          </ng-template>-->
-<!--        </mat-table>-->
+
+        <table mat-table [dataSource]="dataSource" style="width: 100%"
+               class="mat-elevation-z8">
+
+          <ng-container matColumnDef="competencia">
+            <th mat-header-cell *matHeaderCellDef>Competencias/Variaveis</th>
+            <td mat-cell *matCellDef="let data">{{data.competencia}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="peso">
+            <th mat-header-cell *matHeaderCellDef>Peso</th>
+            <td mat-cell *matCellDef="let data">{{data.peso}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="escala">
+            <th mat-header-cell *matHeaderCellDef>Escala</th>
+            <td mat-cell *matCellDef="let data">{{data.escala}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="valorEstrategico">
+            <th mat-header-cell *matHeaderCellDef>Valor Estrategico</th>
+            <td mat-cell *matCellDef="let data">{{data.valorEstrategico}}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayColumns"></tr>
+
+        </table>
+
       </div>
+
     </mat-tab>
+
     <mat-tab label="Cadastro de Professores">
+
       <div style="padding: 20px" fxLayoutGap="5%">
+
+        <mat-form-field class="search-form">
+          <input matInput placeholder="Nome: " type="text">
+        </mat-form-field>
+
+        <mat-form-field class="search-form">
+          <input matInput placeholder="Disciplina: " type="text">
+        </mat-form-field>
+
+        <mat-form-field class="search-form">
+          <input matInput placeholder="Curso: " type="text">
+        </mat-form-field>
+
+        <mat-form-field class="search-form">
+          <input matInput placeholder="Formação: " type="text">
+        </mat-form-field>
+
+      </div>
+
+    </mat-tab>
+
+    <mat-tab label="Cadastro de Competências">
+
+      <div style="padding: 20px" fxLayoutGap="5%">
+        <mat-form-field class="search-form">
+          <input matInput placeholder="Tipo: " type="text">
+        </mat-form-field>
         <mat-form-field class="search-form">
           <input matInput placeholder="Nome: " type="text">
         </mat-form-field>
         <mat-form-field class="search-form">
-          <input matInput placeholder="Disciplina: " type="text">
-        </mat-form-field>
-        <mat-form-field class="search-form">
-          <input matInput placeholder="Curso: " type="text">
-        </mat-form-field>
-        <mat-form-field class="search-form">
-          <input matInput placeholder="Formação: " type="text">
+          <input matInput placeholder="Peso: " type="text">
         </mat-form-field>
       </div>
-    </mat-tab>
-    <mat-tab label="Cadastro de Competências">
 
     </mat-tab>
+
   </mat-tab-group>
 
 </div>

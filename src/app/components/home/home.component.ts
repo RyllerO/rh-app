@@ -1,4 +1,51 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ElementData} from '@angular/core/src/view';
+
+export interface Avaliacao {
+  competencia: string;
+  peso: number;
+  escala: number;
+  valorEstrategico: number;
+}
+
+const ELEMENT_DATA: Avaliacao[] = [
+  {
+    competencia: 'Apresentação e postura',
+    peso: 15,
+    escala: 0,
+    valorEstrategico: 0
+  },
+  {
+    competencia: 'Comunicação oral',
+    peso: 9,
+    escala: 0,
+    valorEstrategico: 0
+  },
+  {
+    competencia: 'Comunicação gestual',
+    peso: 7,
+    escala: 0,
+    valorEstrategico: 0
+  },
+  {
+    competencia: 'Comunicação visual',
+    peso: 7,
+    escala: 0,
+    valorEstrategico: 0
+  },
+  {
+    competencia: 'Organização e estrutura de aula',
+    peso: 7,
+    escala: 0,
+    valorEstrategico: 0
+  },
+  {
+    competencia: 'Clima da aula',
+    peso: 7,
+    escala: 0,
+    valorEstrategico: 0
+  }
+];
 
 @Component({
   selector: 'app-home',
@@ -7,11 +54,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  dataSource: ['Apresentação e postura' , 'Comunicação oral', 'Comunicação gestual', 'Comunicação vosial',
-    'Organização e estrutura de aula', 'Clima da aula', 'Clareza nas explicações', 'Controle do tempo',
-    'Seguraça', 'Conhecimento do conteúdo'];
+  displayColumns: string [] = [
+    'competencia',
+    'peso',
+    'escala',
+    'valorEstrategico'];
 
-  constructor() { }
+  dataSource = ELEMENT_DATA;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

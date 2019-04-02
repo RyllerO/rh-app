@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatTabsModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatTableModule, MatTabsModule, MatToolbarModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HomeModule} from './components/home/home.module';
 
@@ -18,7 +18,8 @@ import {HomeModule} from './components/home/home.module';
     MatTabsModule,
     MatButtonModule,
     FlexLayoutModule,
-    HomeModule
+    HomeModule,
+    MatTableModule
   ],
   declarations: [AppComponent ],
   providers: [],
