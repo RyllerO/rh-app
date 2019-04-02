@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {MatFormFieldModule, MatInputModule, MatTableModule, MatTabsModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatTabsModule, MatToolbarModule} from '@angular/material';
 import {HomeComponent} from './home.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
@@ -10,7 +10,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MatInputModule,
     MatFormFieldModule,
     FlexLayoutModule,
-    MatTableModule
+    MatTableModule,
+    MatButtonModule
   ],
   declarations: [HomeComponent],
   exports: [HomeComponent],
