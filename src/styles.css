@@ -5,3 +5,6 @@ body {
   margin: 0;
   background-color: #dddddd;
 }
+.full-width {
+  width: 100% !important;
+}
