@@ -2,6 +2,9 @@ import {NgModule} from '@angular/core';
 import {MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatTabsModule, MatToolbarModule} from '@angular/material';
 import {HomeComponent} from './home.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {AppModule} from '../../app.module';
+import {CabecalhoAvaliacaoComponent} from '../cabecalho-avaliacao/cabecalho-avaliacao.component';
+import {TabelaAvaliacaoComponent} from '../tabela-avaliacao/tabela-avaliacao.component';
 
 @NgModule({
   imports: [
@@ -11,9 +14,9 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MatFormFieldModule,
     FlexLayoutModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
   ],
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, CabecalhoAvaliacaoComponent, TabelaAvaliacaoComponent],
   exports: [HomeComponent],
 })
 
