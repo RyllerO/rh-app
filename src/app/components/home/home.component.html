@@ -13,55 +13,57 @@
       <div style="padding: 20px">
 
         <div fxLayout="col" class="full-width">
-          <div fxLayout="row" fxLayoutGap="10px" class="full-width">
-            <div fxFlex="50%" >
+
+          <div fxLayout="row" fxLayoutGap="30px" class="full-width">
+
+            <div fxFlex="30%">
               <mat-form-field class="search-form full-width">
                 <input matInput placeholder="Membro Avaliador: " type="text">
               </mat-form-field>
-
             </div>
-            <div fxFlex="30%">
+
+            <div fxFlex="20%">
               <mat-form-field class="search-form full-width">
                 <input matInput placeholder="Departamento: " type="text">
               </mat-form-field>
             </div>
-            <div fxFlex="20%">
+
+            <div fxFlex="30%">
               <mat-form-field class="search-form full-width">
                 <input matInput placeholder="Professor Avaliado: " type="text">
               </mat-form-field>
             </div>
-          </div>
-          <div fxLayout="row">
 
           </div>
         </div>
 
-        <div style="padding: 10px" fxLayoutGap="5%">
-<!--          <div fxLayoutGap="20%">-->
-  <!--          </div>-->
-<!--          <div fxLayoutGap="20%">-->
+        <div fxLayout="col" class="full-width">
+          <div fxLayout="row" class="full-width" fxLayoutGap="10px">
 
-<!--          </div>-->
+            <div fxFlex="20%">
+              <mat-form-field class="search-form">
+                <input matInput placeholder="Data: " type="text">
+              </mat-form-field>
+            </div>
 
+            <div fxFlex="20%">
+              <mat-form-field class="search-form">
+                <input matInput  placeholder="Total de Avalidadores" type="text">
+              </mat-form-field>
+            </div>
 
+            <div fxFlex="30%">
+              <mat-form-field class="search-form">
+                <input matInput placeholder="Avaliador Responsável: " type="text">
+              </mat-form-field>
+            </div>
 
-          <mat-form-field class="search-form">
-            <input matInput placeholder="Data: " type="text">
-          </mat-form-field>
-
-          <mat-form-field class="search-form">
-            <input matInput placeholder="Quantidade de Avaliadores: " type="text">
-          </mat-form-field>
-
-          <mat-form-field class="search-form">
-            <input matInput placeholder="Avaliador Responsável: " type="text">
-          </mat-form-field>
-
-          <div style="display:flex" fxLayoutGap="10px">
-            <button mat-raised-button style="background-color: rgba(0,163,0,0.71); color: white;">Salvar</button>
-            <button mat-raised-button color="warn">Limpar/Cancelar</button>
           </div>
+        </div>
 
+        <div style="display:flex" fxLayoutGap="10px">
+          <button mat-raised-button style="background-color: rgba(0,163,0,0.71); color: white;">Salvar</button>
+          <button mat-raised-button color="warn">Limpar/Cancelar</button>
         </div>
 
         <br/>
