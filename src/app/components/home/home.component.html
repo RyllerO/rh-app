@@ -8,7 +8,7 @@
 
   <mat-tab-group>
 
-    <mat-tab label="Avaliação">
+    <mat-tab label="Avaliação" [routerLink]="['']">
 
       <div style="padding: 20px">
 
@@ -22,38 +22,38 @@
 
     </mat-tab>
 
-<!--    <mat-tab label="Cadastro de Professores">-->
+    <!--    <mat-tab label="Cadastro de Professores">-->
 
-<!--      <div style="padding: 20px" fxLayoutGap="5%">-->
+    <!--      <div style="padding: 20px" fxLayoutGap="5%">-->
 
-<!--        <mat-form-field class="search-form">-->
-<!--          <input matInput placeholder="Nome: " type="text">-->
-<!--        </mat-form-field>-->
+    <!--        <mat-form-field class="search-form">-->
+    <!--          <input matInput placeholder="Nome: " type="text">-->
+    <!--        </mat-form-field>-->
 
-<!--        <mat-form-field class="search-form">-->
-<!--          <input matInput placeholder="Disciplina: " type="text">-->
-<!--        </mat-form-field>-->
+    <!--        <mat-form-field class="search-form">-->
+    <!--          <input matInput placeholder="Disciplina: " type="text">-->
+    <!--        </mat-form-field>-->
 
-<!--        <mat-form-field class="search-form">-->
-<!--          <input matInput placeholder="Curso: " type="text">-->
-<!--        </mat-form-field>-->
+    <!--        <mat-form-field class="search-form">-->
+    <!--          <input matInput placeholder="Curso: " type="text">-->
+    <!--        </mat-form-field>-->
 
-<!--        <mat-form-field class="search-form">-->
-<!--          <input matInput placeholder="Formação: " type="text">-->
-<!--        </mat-form-field>-->
+    <!--        <mat-form-field class="search-form">-->
+    <!--          <input matInput placeholder="Formação: " type="text">-->
+    <!--        </mat-form-field>-->
 
-<!--        <div style="display:flex" fxLayoutGap="10px">-->
-<!--          <button mat-raised-button style="background-color: rgba(0,163,0,0.71); color: white;">Salvar</button>-->
-<!--          <button mat-raised-button color="warn">Limpar/Cancelar</button>-->
-<!--        </div>-->
+    <!--        <div style="display:flex" fxLayoutGap="10px">-->
+    <!--          <button mat-raised-button style="background-color: rgba(0,163,0,0.71); color: white;">Salvar</button>-->
+    <!--          <button mat-raised-button color="warn">Limpar/Cancelar</button>-->
+    <!--        </div>-->
 
-<!--      </div>-->
+    <!--      </div>-->
 
-<!--    </mat-tab>-->
+    <!--    </mat-tab>-->
 
-    <mat-tab label="Cadastro de Competências">
+    <mat-tab label="Cadastro de Competências" [routerLink]="['/cadastro-competencia']">
 
-    <app-cadastro-competencia></app-cadastro-competencia>
+      <app-cadastro-competencia></app-cadastro-competencia>
 
     </mat-tab>
 

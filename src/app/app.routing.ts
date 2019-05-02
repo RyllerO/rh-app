@@ -1,10 +1,11 @@
-import {Routes} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
 import {CadastroCompetenciaComponent} from './components/cadastro-competencia/cadastro-competencia.component';
-import {CabecalhoAvaliacaoComponent} from './components/cabecalho-avaliacao/cabecalho-avaliacao.component';
+import {ModuleWithProviders} from '@angular/core';
 
 const app_routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'cadastro-competencia', component: CadastroCompetenciaComponent},
-  {path: 'cabecalho-avaliacao', component: CabecalhoAvaliacaoComponent},
 ];
+
+export const routing: ModuleWithProviders = RouterModule.forRoot(app_routes);

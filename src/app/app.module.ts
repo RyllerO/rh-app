@@ -6,9 +6,7 @@ import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-b
 import {MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatTabsModule, MatToolbarModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HomeModule} from './components/home/home.module';
-import { TabelaAvaliacaoComponent } from './components/tabela-avaliacao/tabela-avaliacao.component';
-import { CabecalhoAvaliacaoComponent } from './components/cabecalho-avaliacao/cabecalho-avaliacao.component';
-import { CadastroCompetenciaComponent } from './components/cadastro-competencia/cadastro-competencia.component';
+import {routing} from './app.routing';
 
 @NgModule({
   imports: [
@@ -25,6 +23,7 @@ import { CadastroCompetenciaComponent } from './components/cadastro-competencia/
     MatInputModule,
     MatFormFieldModule,
     FlexLayoutModule,
+    routing
   ],
   declarations: [AppComponent],
   providers: [],

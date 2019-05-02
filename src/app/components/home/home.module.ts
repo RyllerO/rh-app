@@ -7,6 +7,8 @@ import {CabecalhoAvaliacaoComponent} from '../cabecalho-avaliacao/cabecalho-aval
 import {TabelaAvaliacaoComponent} from '../tabela-avaliacao/tabela-avaliacao.component';
 import {CadastroCompetenciaComponent} from '../cadastro-competencia/cadastro-competencia.component';
 import {FormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
+import {routing} from '../../app.routing';
 
 @NgModule({
   imports: [
@@ -18,6 +20,8 @@ import {FormsModule} from '@angular/forms';
     MatTableModule,
     MatButtonModule,
     FormsModule,
+    RouterModule,
+    routing
   ],
   declarations: [
     HomeComponent,
