@@ -6,6 +6,7 @@ import {AppModule} from '../../app.module';
 import {CabecalhoAvaliacaoComponent} from '../cabecalho-avaliacao/cabecalho-avaliacao.component';
 import {TabelaAvaliacaoComponent} from '../tabela-avaliacao/tabela-avaliacao.component';
 import {CadastroCompetenciaComponent} from '../cadastro-competencia/cadastro-competencia.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import {CadastroCompetenciaComponent} from '../cadastro-competencia/cadastro-com
     FlexLayoutModule,
     MatTableModule,
     MatButtonModule,
+    FormsModule,
   ],
   declarations: [
     HomeComponent,
