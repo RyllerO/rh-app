@@ -8,6 +8,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {HomeModule} from './components/home/home.module';
 import { TabelaAvaliacaoComponent } from './components/tabela-avaliacao/tabela-avaliacao.component';
 import { CabecalhoAvaliacaoComponent } from './components/cabecalho-avaliacao/cabecalho-avaliacao.component';
+import { CadastroCompetenciaComponent } from './components/cadastro-competencia/cadastro-competencia.component';
 
 @NgModule({
   imports: [
