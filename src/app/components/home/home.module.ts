@@ -1,5 +1,13 @@
 import {NgModule} from '@angular/core';
-import {MatButtonModule, MatFormFieldModule, MatInputModule, MatTableModule, MatTabsModule, MatToolbarModule} from '@angular/material';
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatFormFieldModule,
+  MatInputModule, MatSelectModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule
+} from '@angular/material';
 import {HomeComponent} from './home.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AppModule} from '../../app.module';
@@ -9,6 +17,7 @@ import {CadastroCompetenciaComponent} from '../cadastro-competencia/cadastro-com
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {routing} from '../../app.routing';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   imports: [
@@ -21,7 +30,10 @@ import {routing} from '../../app.routing';
     MatButtonModule,
     FormsModule,
     RouterModule,
-    routing
+    routing,
+    CommonModule,
+    MatAutocompleteModule,
+    MatSelectModule
   ],
   declarations: [
     HomeComponent,

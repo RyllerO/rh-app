@@ -1,10 +1,20 @@
-import {TipoCompetencia} from './TipoCategoria.model';
+import {TipoCompetencia} from './TipoCompetencia.model';
 
-export class Categoria {
+export class Competencia {
   private _id: number;
   private _tipoCompetencia: TipoCompetencia;
+  private _nome: String;
   private _descricao: String;
   private _peso: number;
+
+  toJSON() {
+    return JSON.parse(JSON.stringify({
+      tipoCompetencia: this.tipoCompetencia,
+      nome: this.nome,
+      descricao: this.descricao,
+      peso: this.peso
+    }));
+  }
 
   get id(): number {
     return this._id;
@@ -36,5 +46,14 @@ export class Categoria {
 
   set peso(value: number) {
     this._peso = value;
+  }
+
+
+  get nome(): String {
+    return this._nome;
+  }
+
+  set nome(value: String) {
+    this._nome = value;
   }
 }

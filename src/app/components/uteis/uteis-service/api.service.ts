@@ -1,11 +1,11 @@
-import {HttpClient, HttpParams} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Injectable} from '@angular/core';
 
 @Injectable({providedIn: 'root'})
 export class ApiService {
 
-  private _apiURL = 'http://localhost:8080/';
+  private _apiURL = 'http://localhost:4200/api/';
 
   constructor (private _http: HttpClient) {}
 
@@ -14,7 +14,7 @@ export class ApiService {
   }
 
   getPorUrl(sufixo: string): Observable<any> {
-    return this._http.get(`${this._apiURL}/${sufixo}`);
+    return this._http.get(`${this._apiURL}${sufixo}`);
   }
 
   public getPorIdentificador(sufixo: string, identificador: string): Observable<any> {
@@ -28,7 +28,7 @@ export class ApiService {
 
   public post(sufixo: string, json: JSON): Observable<any> {
     // console.log(json);
-    return this._http.post(`${this._apiURL}/${sufixo}`, json);
+    return this._http.post(`${this._apiURL}${sufixo}`, json);
   }
 
   public deletePorId(sufixo: string, id: any): Observable<any> {

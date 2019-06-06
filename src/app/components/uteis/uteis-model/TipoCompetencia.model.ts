@@ -2,6 +2,12 @@ export class TipoCompetencia {
   private _id: number;
   private _nome: String;
 
+  toJSON() {
+    return JSON.parse(JSON.stringify({
+      nome: this.nome
+    }));
+  }
+
   get id(): number {
     return this._id;
   }

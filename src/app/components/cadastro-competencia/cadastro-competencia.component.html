@@ -3,28 +3,58 @@
   <div fxLayout="col" class="full-width">
     <div fxLayout="row" class="full-width" fxLayoutGap="30px">
 
+
+
       <mat-form-field fxFlex="20%" class="search-form full-width">
-        <input matInput placeholder="Tipo: " type="text">
+        <mat-label>Tipo Competência</mat-label>
+        <mat-select [(ngModel)]="competencia.tipoCompetencia">
+          <mat-option *ngFor="let data of listaTipoCompetencias" [value]="data">
+            {{data.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+<!--      <mat-form-field fxFlex="20%" class="search-form full-width">-->
+<!--        <input matInput placeholder="Tipo: " type="text" [(ngModel)]="competencia.tipoCompetencia">-->
+<!--      </mat-form-field>-->
+
+      <mat-form-field fxFlex="20%" class="search-form full-width">
+        <input matInput placeholder="Nome: " type="text" [(ngModel)]="competencia.nome">
+      </mat-form-field>
+
+      <mat-form-field fxFlex="40%" class="search-form full-width">
+        <input matInput placeholder="Descrição: " type="text" [(ngModel)]="competencia.descricao">
       </mat-form-field>
 
       <mat-form-field fxFlex="20%" class="search-form full-width">
-        <input matInput placeholder="Nome: " type="text">
-      </mat-form-field>
-
-      <mat-form-field fxFlex="40%"class="search-form full-width">
-        <input matInput placeholder="Descrição: " type="text">
-      </mat-form-field>
-
-      <mat-form-field fxFlex="20%" class="search-form full-width">
-        <input matInput placeholder="Peso: " type="text">
+        <input matInput placeholder="Peso: " type="text" [(ngModel)]="competencia.peso">
       </mat-form-field>
 
     </div>
   </div>
 
   <div style="display:flex" fxLayoutGap="10px">
-    <button mat-raised-button style="background-color: rgba(0,163,0,0.71); color: white;">Salvar</button>
-    <button mat-raised-button color="warn">Limpar/Cancelar</button>
+    <button mat-raised-button style="background-color: rgba(0,163,0,0.71); color: white;" (click)="salvarCompetencia()">Salvar</button>
+    <button mat-raised-button color="warn" (click)="limpar()">Limpar/Cancelar</button>
+  </div>
+
+  <div style="padding-top: 50px">
+    <table class="full-width w3-table w3-table-all ">
+      <thead>
+      <tr class="w3-red">
+        <th>Tipo</th>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Peso</th>
+      </tr>
+      </thead>
+      <tr *ngFor="let competencia of listaCompetencias">
+        <td>{{competencia.tipoCompetencia.nome}}</td>
+        <td>{{competencia.nome}}</td>
+        <td>{{competencia.descricao}}</td>
+        <td>{{competencia.peso}}</td>
+      </tr>
+    </table>
   </div>
 
 </div>
