@@ -50,6 +50,7 @@ export class CadastroCompetenciaComponent implements OnInit {
       resposta => {
         console.log(resposta);
         this.getCompetencias();
+        this.limpar();
       },
       err => console.log(err)
     );

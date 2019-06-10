@@ -4,7 +4,8 @@
     <div fxLayout="row" class="full-width" fxLayoutGap="30px">
 
 
-
+<!--      {{competencia.tipoCompetencia | json}}-->
+<!--      <br/>-->
       <mat-form-field fxFlex="20%" class="search-form full-width">
         <mat-label>Tipo Competência</mat-label>
         <mat-select [(ngModel)]="competencia.tipoCompetencia">
@@ -46,6 +47,7 @@
         <th>Nome</th>
         <th>Descrição</th>
         <th>Peso</th>
+        <th>Ação</th>
       </tr>
       </thead>
       <tr *ngFor="let competencia of listaCompetencias">
@@ -53,6 +55,10 @@
         <td>{{competencia.nome}}</td>
         <td>{{competencia.descricao}}</td>
         <td>{{competencia.peso}}</td>
+        <td>
+          <button mat-raised-button style="background-color: rgba(0,184,249,0.93); color: white;">Editar</button>
+          <button mat-raised-button color="warn">Excluir</button>
+        </td>
       </tr>
     </table>
   </div>

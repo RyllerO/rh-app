@@ -33,7 +33,8 @@ import {CommonModule} from '@angular/common';
     routing,
     CommonModule,
     MatAutocompleteModule,
-    MatSelectModule
+    MatSelectModule,
+    CommonModule
   ],
   declarations: [
     HomeComponent,

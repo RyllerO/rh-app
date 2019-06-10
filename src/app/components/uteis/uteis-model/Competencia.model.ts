@@ -6,6 +6,8 @@ export class Competencia {
   private _nome: String;
   private _descricao: String;
   private _peso: number;
+  private _escala: number;
+  private _valorEstrategico: number;
 
   toJSON() {
     return JSON.parse(JSON.stringify({
@@ -55,5 +57,21 @@ export class Competencia {
 
   set nome(value: String) {
     this._nome = value;
+  }
+
+  get escala(): number {
+    return this._escala;
+  }
+
+  set escala(value: number) {
+    this._escala = value;
+  }
+
+  get valorEstrategico(): number {
+    return this._valorEstrategico;
+  }
+
+  set valorEstrategico(value: number) {
+    this._valorEstrategico = value;
   }
 }

@@ -1,35 +1,73 @@
-<table mat-table [dataSource]="dataSource" style="width: 100%"
-       class="mat-elevation-z8">
+<!--<table mat-table [dataSource]="listaCompetencias" style="width: 100%"-->
+<!--       class="mat-elevation-z8">-->
 
-  <ng-container matColumnDef="competencia">
-    <th mat-header-cell *matHeaderCellDef>Competencias/Variaveis</th>
-    <td mat-cell *matCellDef="let data">{{data.competencia}}</td>
-    <td mat-footer-cell *matFooterCellDef> Total:</td>
-  </ng-container>
+<!--  <ng-container matColumnDef="competencia">-->
+<!--    <th mat-header-cell *matHeaderCellDef>Competencias/Variaveis</th>-->
+<!--    <td mat-cell *matCellDef="let data">{{data.nome}}</td>-->
+<!--    <td mat-footer-cell *matFooterCellDef> Total:</td>-->
+<!--  </ng-container>-->
 
-  <ng-container matColumnDef="peso">
-    <th mat-header-cell *matHeaderCellDef>Peso</th>
-    <td mat-cell *matCellDef="let data">{{data.peso}}</td>
-    <td mat-footer-cell *matFooterCellDef> {{getTotalPesos()}} </td>
-  </ng-container>
+<!--  <ng-container matColumnDef="peso">-->
+<!--    <th mat-header-cell *matHeaderCellDef>Peso</th>-->
+<!--    <td mat-cell *matCellDef="let data">{{data.peso}}</td>-->
+<!--    <td mat-footer-cell *matFooterCellDef> {{getTotalPesos()}} </td>-->
+<!--  </ng-container>-->
 
-  <ng-container matColumnDef="escala">
-    <th mat-header-cell *matHeaderCellDef>Escala</th>
-    <td mat-cell *matCellDef="let data">
-<!--      {{data.escala}}-->
-      <input matInput type="text" [(ngModel)]="data.escala">
-    </td>
-    <td mat-footer-cell *matFooterCellDef>  {{getTotalPesos()}}  </td>
-  </ng-container>
+<!--  <ng-container matColumnDef="escala">-->
+<!--    <th mat-header-cell *matHeaderCellDef>Escala</th>-->
+<!--    <td mat-cell *matCellDef="let data">-->
+<!--&lt;!&ndash;      {{data.escala}}&ndash;&gt;-->
+<!--      <input matInput type="text" [(ngModel)]="data.escala">-->
+<!--    </td>-->
+<!--    <td mat-footer-cell *matFooterCellDef>  {{getTotalPesos()}}  </td>-->
+<!--  </ng-container>-->
 
-  <ng-container matColumnDef="valorEstrategico">
-    <th mat-header-cell *matHeaderCellDef>Valor Estrategico</th>
-    <td mat-cell *matCellDef="let data">{{data.valorEstrategico}}</td>
-    <td mat-footer-cell *matFooterCellDef>  {{getTotalPesos()}} </td>
-  </ng-container>
+<!--  <ng-container matColumnDef="valorEstrategico">-->
+<!--    <th mat-header-cell *matHeaderCellDef>Valor Estrategico</th>-->
+<!--    <td mat-cell *matCellDef="let data">{{data}}</td>-->
+<!--    <td mat-footer-cell *matFooterCellDef>  {{getTotalPesos()}} </td>-->
+<!--  </ng-container>-->
 
-  <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayColumns"></tr>
-  <tr mat-footer-row *matFooterRowDef="displayColumns"></tr>
+<!--  <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>-->
+<!--  <tr mat-row *matRowDef="let row; columns: displayColumns"></tr>-->
+<!--  <tr mat-footer-row *matFooterRowDef="displayColumns"></tr>-->
 
-</table>
+<!--</table>-->
+
+<div style="padding-top: 50px">
+  <table class="full-width w3-table w3-table-all ">
+    <thead>
+    <tr class="w3-red">
+      <th>Competência</th>
+      <th>Peso</th>
+      <th>Escala</th>
+      <th>Valor Estratégico</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let obj of listaCompetencias">
+      <td>{{obj.nome}}</td>
+      <td>{{obj.peso}}</td>
+      <td>
+        <label>
+          <input type="text" [(ngModel)]="obj.escala"/>
+        </label>
+      </td>
+      <td>
+        <label *ngIf="obj.escala">
+          {{obj.peso * obj.escala}}
+        </label>
+      </td>
+    </tr>
+    </tbody>
+    <tfoot>
+      <tr class="w3-red">
+        <td>Total</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
