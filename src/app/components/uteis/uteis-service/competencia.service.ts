@@ -17,9 +17,9 @@ export class CompetenciaService {
   }
 
   postCompetencia(competencia: Competencia): Observable<any> {
-    if (competencia.tipoCompetencia.id) {
-      competencia.tipoCompetencia.id = null;
-    }
-    return this._apiService.post('competencias', JSON.parse(JSON.stringify(competencia)) );
+    // if (competencia.tipoCompetencia.id) {
+    //     //   competencia.tipoCompetencia.nome = null;
+    //     // }
+    return this._apiService.post('competencias', competencia.toJSON());
   }
 }

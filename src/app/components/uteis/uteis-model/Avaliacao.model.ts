@@ -9,6 +9,10 @@ export class Avaliacao {
   private _avaliadorResponsavel: string;
   private _competencias: Competencia[];
 
+  toJSON() {
+    return JSON
+  }
+
   get _membroAvaliador(): string {
     return this.__membroAvaliador;
   }

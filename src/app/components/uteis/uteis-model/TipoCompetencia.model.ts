@@ -4,7 +4,7 @@ export class TipoCompetencia {
 
   toJSON() {
     return JSON.parse(JSON.stringify({
-      nome: this.nome
+      _id: this.id
     }));
   }
 

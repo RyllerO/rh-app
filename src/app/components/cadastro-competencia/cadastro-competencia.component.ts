@@ -42,7 +42,7 @@ export class CadastroCompetenciaComponent implements OnInit {
   }
 
   limpar() {
-    this.competencia = null;
+    this.competencia = new Competencia();
   }
 
   salvarCompetencia() {
