@@ -1,3 +1,5 @@
+import {Competencia} from './Competencia.model';
+
 export class Avaliacao {
   private __membroAvaliador: string;
   private _departamento: string;
@@ -5,10 +7,7 @@ export class Avaliacao {
   private _data: Date;
   private _totalAvaliadores: number;
   private _avaliadorResponsavel: string;
-  private _competencia: string [];
-  private _peso: number[];
-  private _escala: number[];
-  private  _valorEstrategico: number[];
+  private _competencias: Competencia[];
 
   get _membroAvaliador(): string {
     return this.__membroAvaliador;
@@ -58,27 +57,11 @@ export class Avaliacao {
     this._avaliadorResponsavel = value;
   }
 
-  get competencia(): string[] {
-    return this._competencia;
+  get competencias(): Competencia[] {
+    return this._competencias;
   }
 
-  set competencia(value: string[]) {
-    this._competencia = value;
-  }
-
-  get peso(): number[] {
-    return this._peso;
-  }
-
-  set peso(value: number[]) {
-    this._peso = value;
-  }
-
-  get escala(): number[] {
-    return this._escala;
-  }
-
-  set escala(value: number[]) {
-    this._escala = value;
+  set competencias(value: Competencia[]) {
+    this._competencias = value;
   }
 }
