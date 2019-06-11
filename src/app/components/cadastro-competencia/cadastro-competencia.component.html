@@ -50,14 +50,15 @@
         <th>Ação</th>
       </tr>
       </thead>
-      <tr *ngFor="let competencia of listaCompetencias">
-        <td>{{competencia.tipoCompetencia.nome}}</td>
-        <td>{{competencia.nome}}</td>
-        <td>{{competencia.descricao}}</td>
-        <td>{{competencia.peso}}</td>
+      <tr *ngFor="let obj of listaCompetencias">
+        <td>{{obj.tipoCompetencia.nome}}</td>
+        <td>{{obj.nome}}</td>
+        <td>{{obj.descricao}}</td>
+        <td>{{obj.peso}}</td>
         <td>
           <button mat-raised-button style="background-color: rgba(0,184,249,0.93); color: white;">Editar</button>
-          <button mat-raised-button color="warn">Excluir</button>
+          <button mat-raised-button color="warn"
+                  (click)="deletarCompetencia(obj)">Excluir</button>
         </td>
       </tr>
     </table>

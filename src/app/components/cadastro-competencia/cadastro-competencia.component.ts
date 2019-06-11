@@ -56,4 +56,15 @@ export class CadastroCompetenciaComponent implements OnInit {
     );
   }
 
+  deletarCompetencia(competencia: Competencia) {
+    this.competenciaService.deleteCompetencia(competencia.id).subscribe(
+      () => {
+        this.getCompetencias();
+        this.limpar();
+      },
+      error1 =>
+        console.log(error1)
+    );
+  }
+
 }

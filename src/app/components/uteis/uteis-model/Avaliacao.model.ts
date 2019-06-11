@@ -1,24 +1,33 @@
 import {Competencia} from './Competencia.model';
 
 export class Avaliacao {
-  private __membroAvaliador: string;
+  private _membroAvaliador: string;
   private _departamento: string;
   private _professorAvaliado: string;
-  private _data: Date;
+  private _data: string;
   private _totalAvaliadores: number;
   private _avaliadorResponsavel: string;
   private _competencias: Competencia[];
 
   toJSON() {
-    return JSON
+    return JSON.parse(JSON.stringify({
+      membroAvaliador: this.membroAvaliador,
+      departamento: this.departamento,
+      professorAvaliado: this.professorAvaliado,
+      data: this.data,
+      totalAvaliadores: this.totalAvaliadores,
+      avaliadorResponsavel: this.avaliadorResponsavel,
+      competencias: this.competencias
+    }));
   }
 
-  get _membroAvaliador(): string {
-    return this.__membroAvaliador;
+
+  get membroAvaliador(): string {
+    return this._membroAvaliador;
   }
 
-  set _membroAvaliador(value: string) {
-    this.__membroAvaliador = value;
+  set membroAvaliador(value: string) {
+    this._membroAvaliador = value;
   }
 
   get departamento(): string {
@@ -37,11 +46,11 @@ export class Avaliacao {
     this._professorAvaliado = value;
   }
 
-  get data(): Date {
+  get data(): string {
     return this._data;
   }
 
-  set data(value: Date) {
+  set data(value: string) {
     this._data = value;
   }
 

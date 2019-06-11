@@ -11,6 +11,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {CompetenciaService} from './components/uteis/uteis-service/competencia.service';
 import {ApiService} from './components/uteis/uteis-service/api.service';
 import {CommonModule} from '@angular/common';
+import {AvaliacaoService} from './components/uteis/uteis-service/avaliacao.service';
 
 @NgModule({
   imports: [
@@ -32,7 +33,7 @@ import {CommonModule} from '@angular/common';
     CommonModule
   ],
   declarations: [AppComponent],
-  providers: [HttpClient, CompetenciaService, ApiService],
+  providers: [HttpClient, CompetenciaService, ApiService, AvaliacaoService],
   exports: [],
   bootstrap: [AppComponent]
 })

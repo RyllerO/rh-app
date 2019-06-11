@@ -22,4 +22,8 @@ export class CompetenciaService {
     //     // }
     return this._apiService.post('competencias', competencia.toJSON());
   }
+
+  deleteCompetencia(id: number): Observable<any> {
+    return this._apiService.deletePorId('competencias', id);
+  }
 }

@@ -33,7 +33,7 @@ export class ApiService {
 
   public deletePorId(sufixo: string, id: any): Observable<any> {
     // console.log(json);
-    return this._http.delete(`${this._apiURL}/${sufixo}/`, id);
+    return this._http.delete(`${this._apiURL}${sufixo}/`, id);
   }
 
 }
