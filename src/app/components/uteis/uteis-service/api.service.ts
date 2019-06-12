@@ -23,7 +23,7 @@ export class ApiService {
 
   public put(sufixo: string, json: JSON): Observable<any> {
     // console.log(json);
-    return this._http.put(`${this._apiURL}/${sufixo}`, json);
+    return this._http.put(`${this._apiURL}${sufixo}`, json);
   }
 
   public post(sufixo: string, json: JSON): Observable<any> {
@@ -31,9 +31,9 @@ export class ApiService {
     return this._http.post(`${this._apiURL}${sufixo}`, json);
   }
 
-  public deletePorId(sufixo: string, id: any): Observable<any> {
+  public delete(sufixo: string): Observable<any> {
     // console.log(json);
-    return this._http.delete(`${this._apiURL}${sufixo}/`, id);
+    return this._http.delete(`${this._apiURL}${sufixo}`);
   }
 
 }

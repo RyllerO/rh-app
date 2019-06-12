@@ -13,10 +13,12 @@ export class CadastroCompetenciaComponent implements OnInit {
   public listaCompetencias: Competencia[];
   public listaTipoCompetencias: TipoCompetencia[];
   public competencia: Competencia = new Competencia();
+  public editCompetentecia: boolean = false;
 
   constructor(private competenciaService: CompetenciaService) { }
 
   ngOnInit() {
+    this.limpar();
     this.getTipoCompetencias();
     this.getCompetencias();
   }
@@ -43,6 +45,7 @@ export class CadastroCompetenciaComponent implements OnInit {
 
   limpar() {
     this.competencia = new Competencia();
+    this.editCompetentecia = false;
   }
 
   salvarCompetencia() {
@@ -65,6 +68,24 @@ export class CadastroCompetenciaComponent implements OnInit {
       error1 =>
         console.log(error1)
     );
+  }
+
+  editarCompetencia() {
+    this.competenciaService.putCompetencia(this.competencia).subscribe(
+      () => {
+        this.getCompetencias();
+        this.limpar();
+      },
+      err => console.log(err)
+    );
+  }
+
+  setEdicaoCompetencia(competencia: Competencia) {
+    console.log(competencia);
+    this.editCompetentecia = true;
+    this.competencia = competencia;
+    this.competencia.tipoCompetencia = competencia.tipoCompetencia;
+    console.log(this.competencia);
   }
 
 }

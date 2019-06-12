@@ -24,6 +24,10 @@ export class CompetenciaService {
   }
 
   deleteCompetencia(id: number): Observable<any> {
-    return this._apiService.deletePorId('competencias', id);
+    return this._apiService.delete(`competencias/${id}`);
+  }
+
+  putCompetencia(competencia: Competencia): Observable<any> {
+    return this._apiService.put(`competencias/${competencia.id}`, JSON.parse(JSON.stringify(competencia)));
   }
 }

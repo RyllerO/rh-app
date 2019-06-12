@@ -35,7 +35,11 @@
   </div>
 
   <div style="display:flex" fxLayoutGap="10px">
-    <button mat-raised-button style="background-color: rgba(0,163,0,0.71); color: white;" (click)="salvarCompetencia()">Salvar</button>
+    <button mat-raised-button style="background-color: rgba(0,163,0,0.71); color: white;"
+            (click)="salvarCompetencia()" *ngIf="!editCompetentecia">Salvar</button>
+
+    <button mat-raised-button style="background-color: rgba(0,163,0,0.71); color: white;"
+            (click)="editarCompetencia()" *ngIf="editCompetentecia">Salvar</button>
     <button mat-raised-button color="warn" (click)="limpar()">Limpar/Cancelar</button>
   </div>
 
@@ -56,7 +60,8 @@
         <td>{{obj.descricao}}</td>
         <td>{{obj.peso}}</td>
         <td>
-          <button mat-raised-button style="background-color: rgba(0,184,249,0.93); color: white;">Editar</button>
+          <button mat-raised-button style="background-color: rgba(0,184,249,0.93); color: white;"
+          (click)="setEdicaoCompetencia(obj)">Editar</button>
           <button mat-raised-button color="warn"
                   (click)="deletarCompetencia(obj)">Excluir</button>
         </td>
